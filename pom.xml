@@ -3,9 +3,9 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.springframework</groupId>
-    <artifactId>gs-spring-boot-docker</artifactId>
-    <version>0.1.0</version>
+    <groupId>com.poc.app</groupId>
+    <artifactId>sample-springboot-app</artifactId>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
     <name>Spring Boot Docker</name>
     <description>Getting started with Spring Boot and Docker</description>
@@ -18,7 +18,7 @@
     </parent>
 
     <properties>
-        <docker.image.prefix>springio</docker.image.prefix>
+        <docker.image.prefix>avijitsarkar123</docker.image.prefix>
         <java.version>1.8</java.version>
     </properties>
 
@@ -35,6 +35,7 @@
                 <version>1.4.9</version>
                 <configuration>
                     <repository>${docker.image.prefix}/${project.artifactId}</repository>
+                    <tag>${project.version}</tag>
                 </configuration>
             </plugin>
             <!-- end::plugin[] -->
@@ -76,6 +77,10 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
     </dependencies>
 
 </project>

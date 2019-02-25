@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+#TODO: figure out why I need this here and in bootstrap.yml
+spring:
+  application:
+    name: testLatticeApp
+  jpa:
+    hibernate:
+      ddl-auto: create
+  datasource:
+    url: jdbc:mysql://localhost:3306/events?verifyServerCertificate=false&useSSL=false&requireSSL=false
+    username: root
+    password: password
+
+ribbon:
+  ServerListRefreshInterval: 1000
+
+endpoints:
+  health:
+    sensitive: false
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  
