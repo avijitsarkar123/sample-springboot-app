@@ -5,7 +5,7 @@
 
     <groupId>com.poc.app</groupId>
     <artifactId>sample-springboot-app</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <packaging>jar</packaging>
     <name>Spring Boot Docker</name>
     <description>Getting started with Spring Boot and Docker</description>
