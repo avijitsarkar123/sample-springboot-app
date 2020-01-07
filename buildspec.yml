@@ -26,5 +26,5 @@ phases:
 
 artifacts:
   files:
-    - target/sample-app*.jar
+    - target/sample-springboot-app*.jar
   discard-paths: yes
