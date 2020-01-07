@@ -1,5 +1,7 @@
 server:
   port: 8080
+  servlet:
+    context-path: /sample-app
 
 #TODO: figure out why I need this here and in bootstrap.yml
 spring:
@@ -23,10 +25,9 @@ endpoints:
     enabled: true
   shutdown:
     enabled: true
-    
+
 management:
   endpoints:
     web:
       exposure:
         include: "*"
-  
